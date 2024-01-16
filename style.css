@@ -1,0 +1,573 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* scroller */
+.scroller-container {
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Lebar scroller tetap 300px */
+  height: 400px; /* Tinggi scroller tetap 400px */
+}
+
+.scroller-content {
+  display: flex;
+  flex-direction: column;
+  animation: scroll 20s linear infinite;
+}
+
+.scroller-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.news-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  max-height: 150px; /* Tinggi gambar tetap 150px */
+}
+
+.news-description {
+  margin-bottom: 10px;
+  max-height: 100px; /* Tinggi penjelasan tetap 100px */
+  overflow: hidden;
+}
+
+.news-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-78%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .scroller-container {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+}
+
+/* Navbar style */
+.navbar {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
+}
+
+.navbar-brand {
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.nav-link {
+  border-bottom: 2px solid transparent; /* Garis bawah awalnya transparan */
+  transition: border-bottom-color 0.3s ease-in-out; /* Efek transisi untuk warna garis bawah */
+}
+
+.nav-item {
+  transition: transform 0.3s ease-out;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  border-bottom-color: #b69e17; /* Warna garis bawah saat hover atau aktif */
+}
+
+/* Warna teks pada navbar saat awal */
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+  color: #000 !important; /* Ganti dengan warna teks pada navbar saat awal */
+}
+
+/* Warna latar belakang navbar saat awal */
+.navbar-light {
+  background-color: #fff !important; /* Ganti dengan warna latar belakang navbar saat awal */
+}
+
+/* Warna latar belakang navbar saat di-scroll */
+.navbar-light.scrolled {
+  background-color: rgb(134, 17, 17) !important; /* Ganti dengan warna latar belakang navbar saat di-scroll */
+  color: #fff !important; /* Ganti dengan warna teks pada navbar saat di-scroll */
+}
+
+/* Tambahkan style untuk class 'scrolled' untuk warna teks */
+.scrolled .nav-link {
+  color: #fff !important; /* Ganti dengan warna teks yang diinginkan */
+}
+
+/* jumbotron */
+.jumbotron {
+  padding-top: 7rem;
+  background: url(/BGHP-EGPTMMM.png);
+  background-size: cover;
+  background-position-x: center;
+}
+
+.img-thumbnail {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.jumbotron:hover .img-thumbnail {
+  transform: scale(1.1);
+}
+
+.jumbotron h1 {
+  color: whitesmoke;
+  font-family: "Arial", sans-serif;
+  margin: 30px;
+}
+
+.jumbotron p {
+  color: bisque;
+  transform: translateY(5px);
+  font-style: initial;
+}
+
+section {
+  padding-top: 6rem;
+}
+
+/* layanan tentang kami */
+#profil {
+  background-color: #ffffff;
+}
+
+.circle-icon {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  transition: all 0.1s ease-in;
+}
+
+/* card tentang kami */
+#card-layanan-1 {
+  width: 100%;
+  height: 313px;
+  border-radius: 30px;
+  background: url(/wll\ layanan.png);
+  background-size: cover;
+  padding: 30px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: all 0.2s ease-in;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+
+#card-layanan-1 h3 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-1 p {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: all 0.3s ease-in;
+}
+
+/* Hover Layanan produk*/
+#card-layanan-1:hover {
+  width: 100%;
+  height: 313px;
+  border-radius: 5px;
+  background: url(/meeting.png);
+  background-size: cover;
+  padding: 40px;
+  box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease-in;
+  border-radius: 50%;
+}
+
+#card-layanan-1:hover .circle-icon {
+  background-color: #ffffff;
+  transition: all 0.2s ease-in;
+  border-radius: 50%;
+}
+
+#card-layanan-1:hover h3 {
+  color: #ffffff;
+  font-size: 20px;
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-1:hover p {
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.2s ease-in;
+}
+
+/* layanan produk*/
+#card-layanan-2 {
+  width: 100%;
+  height: 313px;
+  border-radius: 30px;
+  background: url(/wll\ dsply\ rkok.png);
+  background-size: cover;
+  padding: 30px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: all 0.2s ease-in;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+
+#card-layanan-2 h3 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-2 p {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: all 0.3s ease-in;
+}
+
+/* Hover Layanan produk*/
+#card-layanan-2:hover {
+  width: 100%;
+  height: 313px;
+  border-radius: 5px;
+  background: url(/dagang-rokok.png);
+  background-size: cover;
+  padding: 40px;
+  box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in;
+  border-radius: 50%;
+}
+
+#card-layanan-2:hover .circle-icon {
+  background-color: #ffffff;
+
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-2:hover h3 {
+  color: #ffffff;
+  font-size: 20px;
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-2:hover p {
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.2s ease-in;
+}
+
+/* layanan Distribusi */
+#card-layanan-3 {
+  width: 100%;
+  height: 313px;
+  border-radius: 30px;
+  background: url(/cover-bgor-cakupan.png);
+  background-size: cover;
+  padding: 30px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: all 0.2s ease-in;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+
+#card-layanan-3 h3 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-3 p {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: all 0.3s ease-in;
+}
+
+/* Hover Layanan distribusi kami*/
+#card-layanan-3:hover {
+  width: 100%;
+  height: 313px;
+  border-radius: 5px;
+  background: url(/ditribusi.png);
+  background-size: cover;
+  padding: 40px;
+  box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in;
+  border-radius: 50%;
+}
+
+#card-layanan-3:hover .circle-icon {
+  background-color: #ffffff;
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-3:hover h3 {
+  color: #ffffff;
+  font-size: 20px;
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-3:hover p {
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.2s ease-in;
+}
+
+/* layanan SDM */
+#card-layanan-4 {
+  width: 100%;
+  height: 313px;
+  border-radius: 30px;
+  background: url(/BGHP-EGPTMMM.png);
+  background-size: cover;
+  padding: 30px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: all 0.2s ease-in;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+
+#card-layanan-4 h3 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-4 p {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: all 0.3s ease-in;
+}
+
+/* Hover Layanan sdm kami*/
+#card-layanan-4:hover {
+  width: 100%;
+  height: 313px;
+  border-radius: 5px;
+  background: url(/EGPTMMM2020\ SDM.png);
+  background-size: cover;
+  padding: 40px;
+  box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in;
+  border-radius: 50%;
+}
+
+#card-layanan-4:hover .circle-icon {
+  background-color: #ffffff;
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-4:hover h3 {
+  color: #ffffff;
+  font-size: 20px;
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-4:hover p {
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.2s ease-in;
+}
+
+/* layanan Sosial */
+#card-layanan-5 {
+  width: 100%;
+  height: 313px;
+  border-radius: 30px;
+  background: url(/takjil.png);
+  background-size: cover;
+  padding: 30px;
+  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.05);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: all 0.2s ease-in;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+
+#card-layanan-5 h3 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-5 p {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: all 0.3s ease-in;
+}
+
+/* Hover Layanan tentang kami*/
+#card-layanan-5:hover {
+  width: 100%;
+  height: 313px;
+  border-radius: 5px;
+  background: url(/PT\ 2021.png);
+  background-size: cover;
+  padding: 40px;
+  box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in;
+  border-radius: 50%;
+}
+
+#card-layanan-5:hover .circle-icon {
+  background-color: #ffffff;
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-5:hover h3 {
+  color: #ffffff;
+  font-size: 20px;
+  transition: all 0.2s ease-in;
+}
+
+#card-layanan-5:hover p {
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.2s ease-in;
+}
+
+#media {
+  background-color: #000000;
+}
+
+/* carousel */
+.carousel-item .display-5 {
+  margin-top: -440px;
+}
+
+.carousel-item .hr {
+  border-color: #850909;
+  width: 70px;
+  border-width: 3px;
+}
+
+.carousel-item .btn {
+  border: none;
+  border-radius: 25px;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-top: 40px;
+}
+
+/* tombol prev next */
+.carousel-control-prev {
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-control-prev:hover {
+  transform: scale(2.05);
+}
+
+.carousel-control-next {
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-control-next:hover {
+  transform: scale(2.05);
+}
+
+/* tombol in media */
+.btn {
+  transition: transform 0.3s ease-out;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+#kontak {
+  background: url(/merapi\ wllper.png);
+  background-size: cover;
+}
+
+.color {
+  color: #faf6f6;
+}
+
+/* arrow button */
+.arrow-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.arrow-container:hover {
+  opacity: 1;
+}
+
+.arrow {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow:hover {
+  transform: scale(1.05);
+}
